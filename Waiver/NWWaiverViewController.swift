@@ -9,7 +9,7 @@
 import UIKit
 
 public protocol NWWaiverCompletedDelegate{
-    func customerDidAccept(firstName: String, lastName: String)
+    func customerDidAccept(userProfile: UserProfileProtocol)
     func customerDidDecline()
 }
 
@@ -44,12 +44,13 @@ public class NWWaiverViewController: UIViewController {
 
     @IBAction func acceptBtnTapped(sender: AnyObject) {
         if(delegate != nil){
-            delegate.customerDidAccept("First", lastName: "Last")
+            delegate.customerDidAccept(self.userProfile)
         }
     }
 
     /**
-     * Create this controller from the bundle Xib file
+     * Create this controller from the bundle Xib file.
+     * This is a helper method to get the View Controller with default interface.
      */
     public static func fromBundleXib()->NWWaiverViewController{
         let bundle = NSBundle(forClass: self)
@@ -58,11 +59,17 @@ public class NWWaiverViewController: UIViewController {
         return vc
     }
 
+    /**
+    * Set the set the location of the waiver as well as the locale for display.
+    */
     public func setWaiverUrlAndLocale(url: String, locale: String){
         self.waiverUrl = url
         self.locale = locale
     }
 
+    /**
+    * Set the user profile so we can get user information.
+    */
     public func setUserProfile(userProfile: UserProfileProtocol){
         self.userProfile = userProfile
     }

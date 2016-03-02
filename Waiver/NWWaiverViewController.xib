@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NWWaiverViewController" customModule="Waiver" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="waiverWebview" destination="VMe-wq-pMv" id="kqs-03-kts"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dek-v8-eew">
+                    <rect key="frame" x="0.0" y="550" width="300" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="76x-Es-9x0"/>
+                    </constraints>
+                    <state key="normal" title="Accept"/>
+                    <connections>
+                        <action selector="acceptBtnTapped:" destination="-1" eventType="touchUpInside" id="YgS-O3-hJD"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZk-2R-255">
+                    <rect key="frame" x="300" y="550" width="300" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="uyr-oK-YOh"/>
+                    </constraints>
+                    <state key="normal" title="Decline"/>
+                    <connections>
+                        <action selector="declineBtnTapped:" destination="-1" eventType="touchUpInside" id="H7I-KV-QVj"/>
+                    </connections>
+                </button>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VMe-wq-pMv">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="550"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                </webView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="VMe-wq-pMv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="1fC-gp-gg2"/>
+                <constraint firstAttribute="bottom" secondItem="sZk-2R-255" secondAttribute="bottom" id="AyY-Kw-EU9"/>
+                <constraint firstAttribute="bottom" secondItem="Dek-v8-eew" secondAttribute="bottom" id="Qrd-ca-4EL"/>
+                <constraint firstItem="sZk-2R-255" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.5" id="Tmj-XF-yrP"/>
+                <constraint firstItem="Dek-v8-eew" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Use-vr-wlc"/>
+                <constraint firstItem="VMe-wq-pMv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="VHa-0H-dwI"/>
+                <constraint firstItem="Dek-v8-eew" firstAttribute="top" secondItem="VMe-wq-pMv" secondAttribute="bottom" id="XaX-hx-mGe"/>
+                <constraint firstAttribute="trailing" secondItem="sZk-2R-255" secondAttribute="trailing" id="ZrD-Jf-Kgf"/>
+                <constraint firstAttribute="trailing" secondItem="VMe-wq-pMv" secondAttribute="trailing" id="qV0-fk-q3b"/>
+                <constraint firstItem="Dek-v8-eew" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.5" id="sXf-n9-O2C"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

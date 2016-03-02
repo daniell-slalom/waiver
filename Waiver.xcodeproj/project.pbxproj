@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9DE19BD91C864B2300306E30 /* Waiver.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DE19BD81C864B2300306E30 /* Waiver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9D3F94571C877F6600FDEB73 /* NWWaiverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DE19C021C864D8C00306E30 /* NWWaiverViewController.xib */; };
+		9D3F945E1C877FF600FDEB73 /* NWWaiverViewController.swift in Headers */ = {isa = PBXBuildFile; fileRef = 9DE19C011C864D8C00306E30 /* NWWaiverViewController.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		9D3F945F1C877FFA00FDEB73 /* UserProfileProtocol.swift in Headers */ = {isa = PBXBuildFile; fileRef = B0C5F919B570976EC563669A /* UserProfileProtocol.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		9D3F94601C877FFD00FDEB73 /* Waiver.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DE19BD81C864B2300306E30 /* Waiver.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9DE19BE01C864B2400306E30 /* Waiver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DE19BD51C864B2300306E30 /* Waiver.framework */; };
 		9DE19BE51C864B2400306E30 /* WaiverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE19BE41C864B2400306E30 /* WaiverTests.swift */; };
 		9DE19C031C864D8C00306E30 /* NWWaiverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE19C011C864D8C00306E30 /* NWWaiverViewController.swift */; };
-		9DE19C131C86513300306E30 /* NWWaiverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DE19C021C864D8C00306E30 /* NWWaiverViewController.xib */; };
-		9DE19C1D1C8653C400306E30 /* NWWaiverViewController.swift in Resources */ = {isa = PBXBuildFile; fileRef = 9DE19C011C864D8C00306E30 /* NWWaiverViewController.swift */; };
+		B0C5F38CDED2A7C35FF61308 /* UserProfileProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C5F919B570976EC563669A /* UserProfileProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,7 @@
 		9DE19BE61C864B2400306E30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DE19C011C864D8C00306E30 /* NWWaiverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NWWaiverViewController.swift; sourceTree = "<group>"; };
 		9DE19C021C864D8C00306E30 /* NWWaiverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NWWaiverViewController.xib; sourceTree = "<group>"; };
+		B0C5F919B570976EC563669A /* UserProfileProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +83,7 @@
 				9DE19BDA1C864B2300306E30 /* Info.plist */,
 				9DE19C011C864D8C00306E30 /* NWWaiverViewController.swift */,
 				9DE19C021C864D8C00306E30 /* NWWaiverViewController.xib */,
+				B0C5F919B570976EC563669A /* UserProfileProtocol.swift */,
 			);
 			path = Waiver;
 			sourceTree = "<group>";
@@ -100,7 +104,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DE19BD91C864B2300306E30 /* Waiver.h in Headers */,
+				9D3F94601C877FFD00FDEB73 /* Waiver.h in Headers */,
+				9D3F945F1C877FFA00FDEB73 /* UserProfileProtocol.swift in Headers */,
+				9D3F945E1C877FF600FDEB73 /* NWWaiverViewController.swift in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,8 +190,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DE19C1D1C8653C400306E30 /* NWWaiverViewController.swift in Resources */,
-				9DE19C131C86513300306E30 /* NWWaiverViewController.xib in Resources */,
+				9D3F94571C877F6600FDEB73 /* NWWaiverViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0C5F38CDED2A7C35FF61308 /* UserProfileProtocol.swift in Sources */,
 				9DE19C031C864D8C00306E30 /* NWWaiverViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

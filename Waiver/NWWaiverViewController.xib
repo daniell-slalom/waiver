@@ -19,20 +19,26 @@
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dek-v8-eew">
                     <rect key="frame" x="0.0" y="550" width="300" height="50"/>
+                    <color key="backgroundColor" red="0.11596562825947526" green="0.89136618589743588" blue="0.37480820866427833" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="76x-Es-9x0"/>
                     </constraints>
-                    <state key="normal" title="Accept"/>
+                    <state key="normal" title="Accept">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                     <connections>
                         <action selector="acceptBtnTapped:" destination="-1" eventType="touchUpInside" id="YgS-O3-hJD"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZk-2R-255">
                     <rect key="frame" x="300" y="550" width="300" height="50"/>
+                    <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="uyr-oK-YOh"/>
                     </constraints>
-                    <state key="normal" title="Decline"/>
+                    <state key="normal" title="Decline">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                     <connections>
                         <action selector="declineBtnTapped:" destination="-1" eventType="touchUpInside" id="H7I-KV-QVj"/>
                     </connections>
@@ -42,18 +48,25 @@
                     <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                 </webView>
             </subviews>
+            <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
             <constraints>
                 <constraint firstItem="VMe-wq-pMv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="1fC-gp-gg2"/>
                 <constraint firstAttribute="bottom" secondItem="sZk-2R-255" secondAttribute="bottom" id="AyY-Kw-EU9"/>
                 <constraint firstAttribute="bottom" secondItem="Dek-v8-eew" secondAttribute="bottom" id="Qrd-ca-4EL"/>
                 <constraint firstItem="sZk-2R-255" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.5" id="Tmj-XF-yrP"/>
                 <constraint firstItem="Dek-v8-eew" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Use-vr-wlc"/>
-                <constraint firstItem="VMe-wq-pMv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="VHa-0H-dwI"/>
+                <constraint firstItem="VMe-wq-pMv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="44" id="VHa-0H-dwI"/>
                 <constraint firstItem="Dek-v8-eew" firstAttribute="top" secondItem="VMe-wq-pMv" secondAttribute="bottom" id="XaX-hx-mGe"/>
+                <constraint firstItem="VMe-wq-pMv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="XrS-aR-mbb"/>
                 <constraint firstAttribute="trailing" secondItem="sZk-2R-255" secondAttribute="trailing" id="ZrD-Jf-Kgf"/>
                 <constraint firstAttribute="trailing" secondItem="VMe-wq-pMv" secondAttribute="trailing" id="qV0-fk-q3b"/>
                 <constraint firstItem="Dek-v8-eew" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.5" id="sXf-n9-O2C"/>
             </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="VHa-0H-dwI"/>
+                </mask>
+            </variation>
         </view>
     </objects>
 </document>

@@ -15,7 +15,7 @@ public protocol NWWaiverCompletedDelegate{
 
 public class NWWaiverViewController: UIViewController {
 
-    var delegate: NWWaiverCompletedDelegate! = nil
+    public var delegate: NWWaiverCompletedDelegate! = nil
     var waiverUrl: String! = nil
     var locale: String! = nil
     var userProfile: UserProfileProtocol! = nil
@@ -23,9 +23,13 @@ public class NWWaiverViewController: UIViewController {
     @IBOutlet weak var waiverWebview: UIWebView!
     
     public override func viewDidLoad() {
+        self.title = "Waiver"
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-
+    }
+    
+    public override func viewDidAppear(animated: Bool) {
+        self.loadWaiverWebview()
     }
 
     public override func didReceiveMemoryWarning() {
@@ -33,21 +37,27 @@ public class NWWaiverViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    //MARK: IB outlets
-    
-    
+    //MARK: - IB outlets
     @IBAction func declineBtnTapped(sender: AnyObject) {
         if(delegate != nil){
             delegate.customerDidDecline()
         }
+        self.dismissSelf()
     }
 
     @IBAction func acceptBtnTapped(sender: AnyObject) {
         if(delegate != nil){
             delegate.customerDidAccept(self.userProfile)
         }
+        self.dismissSelf()
+    }
+    
+    func dismissSelf(){
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 
+    //MARK: - public interface
+    
     /**
      * Create this controller from the bundle Xib file.
      * This is a helper method to get the View Controller with default interface.
@@ -58,6 +68,7 @@ public class NWWaiverViewController: UIViewController {
 
         return vc
     }
+    
 
     /**
     * Set the set the location of the waiver as well as the locale for display.
@@ -74,7 +85,12 @@ public class NWWaiverViewController: UIViewController {
         self.userProfile = userProfile
     }
 
-
+    // MARK: - Helper
+    private func loadWaiverWebview(){
+        let url = NSURL(string: self.waiverUrl)
+        let request = NSURLRequest(URL: url!, cachePolicy: NSURLRequestCachePolicy.UseProtocolCachePolicy, timeoutInterval: 3600000)
+        self.waiverWebview.loadRequest(request)
+    }
 
     /*
     // MARK: - Navigation
